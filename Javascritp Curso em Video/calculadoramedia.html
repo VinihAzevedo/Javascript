@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Média</h1>
+    <input type="number" name="" id="media1"> <br> <br>
+    <input type="number" name="" id="media2"> <br> <br>
+    <input type="number" name="" id="media3"> <br> <br>
+    <button onclick ="soma()">calcular</button> 
+    <div id = res>resultado</div>
+
+    <script>
+        function soma(){
+            let num1 = document.getElementById("media1")
+            let num2 = document.getElementById("media2")
+            let num3 = document.getElementById("media3")
+            let res = document.getElementById('res')
+
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            let n3 = Number(num3.value)
+            let sm = (n1 + n2 + n3)/3;
+
+            if(sm >= 5){
+                res.innerHTML ="A média da suas notas é " + sm.toFixed(2) + " Você passou."
+            }
+            else {
+                res.innerHTML ="A média da suas notas é " + sm.toFixed(2) + " Você reprovou."
+            }
+
+        }
+            
+        
+    </script>
+</body>
+</html>
